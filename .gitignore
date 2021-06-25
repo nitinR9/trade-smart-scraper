@@ -1,4 +1,4 @@
 backup/
 node_modules/
-*.json/
+stock-*.json
 logs/
