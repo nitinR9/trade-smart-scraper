@@ -67,11 +67,8 @@ schedule.scheduleJob({
     end: endTime,
     rule: '*/8 * * * 1-5',
 }, async () => {
-    if (stockInit){
-        stockInit = false ;
-        stockLogger.info('now running') ;
-        await getSmallStockDetails(stockLogger) ;
-    }
+    stockLogger.info('now running') ;
+    await getSmallStockDetails(stockLogger) ;
 }) ;
 
 process.on('SIGINT', async () => {
